@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kidney Disease Prediction</title>
+</head>
+<body>
+    <h1>Kidney Disease Prediction</h1>
+    <form method="POST" action="/predict">
+        <input type="text" name="Albumin" placeholder="Albumin"><br>
+        <input type="text" name="sugar" placeholder="sugar"><br>
+        <input type="text" name="blood_glucose_random" placeholder="blood_glucose_random"><br>
+        <input type="text" name="blood_urea" placeholder="blood_urea"><br>
+        <input type="text" name="serum_creatinine" placeholder="serum_creatinine"><br>
+        <input type="text" name="potassium" placeholder="potassium"><br>
+        <input type="text" name="white blood cells count" placeholder="white blood cells count"><br>
+        <input type="text" name="red_blood_cell_count" placeholder="red_blood_cell_count"><br>
+        <input type="number" name="pus_cell" placeholder="pus_cell"><br>
+        <input type="number" name="pus_cell_clumbs" placeholder="pus_cell_clumbs"><br>
+        <input type="number" name="bacteria" placeholder="bacteria"><br>
+        <input type="number" name="hypertension" placeholder="hypertension"><br>
+        <input type="number" name="diabetes_mellitus" placeholder="diabetes_mellitus"><br>
+        <input type="number" name="coronary_artery_disease" placeholder="coronary_artery_disease"><br>
+        <input type="number" name="appetite" placeholder="appetite"><br>
+        <input type="number" name="peda_edema" placeholder="peda_edema"><br>
+        <input type="number" name="anemia" placeholder="anemia"><br>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction_text %}
+        <p>{{ prediction_text }}</p>
+    {% endif %}
+</body>
+</html>
